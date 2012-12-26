@@ -27,13 +27,15 @@
 <?php
 echo
 	$html->tag('body',null,'c_'.$this->params['controller'].' a_'.$this->params['action']),
+		$html->image('bgs/'.$this->params['controller'].'.jpg',array('alt'=>'Background','class'=>'fullbg')),
+		$html->div('outside',''),
 		$html->div(null,null,array('id'=>'nofooter')),
 			$html->div(null,null,array('id'=>'header')),
 				$html->div('clear'),
 					$html->tag('h1',$html->link($sitename_for_layout,'/',array('title'=>$sitename_for_layout)),array('id'=>'logo')),
+					$this->element('menu'),
 				'</div>',
 			'</div>',
-			$this->element('menu'),
 			$html->div(null,$content_for_layout.'',array('id'=>'body')),
 			$html->div(null,'',array('id'=>'cleaner')),
 		'</div><!-- #nofooter -->',
