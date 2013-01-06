@@ -1,8 +1,8 @@
 <?php
-App::import('Controller','_base/Section');
-class AboutController extends SectionController {
+class AboutController extends AppController{
 	var $name = 'About';
-	var $uses = array('About');
+	var $uses = null;
 
+	function index(){}
 }
 ?>
